@@ -49,7 +49,7 @@
 #define TEMP_1_PIN                            14  // Analog Input
 #define TEMP_2_PIN                            15  // Analog Input
 #define TEMP_3_PIN                             8  // Analog Input
-// RAMPS will use TEMP 2 (14) as bed temperature input
+// RAMPS will use TEMP 2 / TEMP_1_PIN (14) as bed temperature input
 
 // Cooling Fans
 //? #define FAN_BOX_PIN        2 (aux drive)
@@ -59,11 +59,11 @@
 //
 // Heaters / Fans
 //
-#define RAMPS_D8_PIN                          11  // HBP heater
+//#define RAMPS_D8_PIN                         8  // HBP heater
 #define RAMPS_D9_PIN                          12  // PLA blower
 #define RAMPS_D10_PIN                          9  // heater e0
-#define MOSFET_D_PIN                           2 // AUX, used as case fan
-
+//#define MOSFET_D_PIN                         2  // AUX, used as case fan
+#define FAN_CHAMBER_PIN                        2  // AUX, used as case fan
 //
 // Auto fans
 //
@@ -98,7 +98,9 @@
   #define BOARD_ST7920_DELAY_3               189
 #endif
 
-// pin config should prevent auto-definition of any IS_RAMPS_*
+// ~~pin config should prevent auto-definition of any IS_RAMPS_*~~
+// pin config should expand to auto-definition of IS_RAMPS_EFB
+// use AUX connected case/box fan as FAN_CHAMBER_PIN
 //
 // Import RAMPS 1.3 pins
 //

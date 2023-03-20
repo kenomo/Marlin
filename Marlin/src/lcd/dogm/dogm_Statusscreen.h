@@ -717,26 +717,40 @@
   #define DO_DRAW_LOGO 1
 #endif
 #if HOTENDS > 0
-  #define DO_DRAW_HOTENDS 1
+  #ifndef DO_DRAW_HOTENDS
+    #define DO_DRAW_HOTENDS 1
+  #endif
 #endif
 #if HAS_HEATED_BED && HOTENDS <= 4
-  #define DO_DRAW_BED 1
+  #ifndef DO_DRAW_BED
+    #define DO_DRAW_BED 1
+  #endif
 #endif
 #if HAS_CUTTER && !DO_DRAW_BED
-  #define DO_DRAW_CUTTER 1
+  #ifndef DO_DRAW_CUTTER
+    #define DO_DRAW_CUTTER 1
+  #endif
 #endif
 #if HAS_COOLER
-  #define DO_DRAW_COOLER 1
+  #ifndef DO_DRAW_COOLER
+    #define DO_DRAW_COOLER 1
+  #endif
 #endif
 #if ENABLED(LASER_COOLANT_FLOW_METER)
-  #define DO_DRAW_FLOWMETER 1
+  #ifndef DO_DRAW_FLOWMETER
+    #define DO_DRAW_FLOWMETER 1
+  #endif
 #endif
 #if ENABLED(I2C_AMMETER)
-  #define DO_DRAW_AMMETER 1
+  #ifndef DO_DRAW_AMMETER
+    #define DO_DRAW_AMMETER 1
+  #endif
 #endif
 
 #if HAS_TEMP_CHAMBER && STATUS_CHAMBER_WIDTH && HOTENDS <= 4
-  #define DO_DRAW_CHAMBER 1
+  #ifndef DO_DRAW_CHAMBER
+    #define DO_DRAW_CHAMBER 1
+  #endif
 #endif
 #if HAS_FAN0 && STATUS_FAN_WIDTH && HOTENDS <= 4 && defined(STATUS_FAN_FRAMES)
   #define DO_DRAW_FAN 1
