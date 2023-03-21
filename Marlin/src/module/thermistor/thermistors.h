@@ -160,6 +160,9 @@ typedef struct { raw_adc_t value; celsius_t celsius; } temp_entry_t;
 #if ANY_THERMISTOR_IS(12) // beta25 = 4700 K, R25 = 100 kOhm, Pull-up = 4.7 kOhm, "Personal calibration for Makibox hot bed"
   #include "thermistor_12.h"
 #endif
+#if ANY_THERMISTOR_IS(69) // beta25 = 4100 K, R25 = 100 kOhm, 4.7 kOhm pull-up, "bq default thermistor table"
+  #include "thermistor_69.h"
+#endif
 #if ANY_THERMISTOR_IS(70) // beta25 = 4100 K, R25 = 100 kOhm, Pull-up = 4.7 kOhm, "Hephestos 2, bqh2 stock thermistor"
   #include "thermistor_70.h"
 #endif

@@ -159,6 +159,8 @@
   #include "ramps/pins_RL200.h"                 // ATmega2560                             env:mega2560
 #elif MB(BQ_ZUM_MEGA_3D)
   #include "ramps/pins_BQ_ZUM_MEGA_3D.h"        // ATmega2560                             env:mega2560ext
+#elif MB(BQ_ZUM_CNC)
+  #include "ramps/pins_BQ_ZUM_CNC.h"            // ATmega2560                             env:mega2560ext
 #elif MB(MAKEBOARD_MINI)
   #include "ramps/pins_MAKEBOARD_MINI.h"        // ATmega2560                             env:mega2560
 #elif MB(TRIGORILLA_13)
